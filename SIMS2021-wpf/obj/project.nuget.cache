@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "SsUSWDs/mJWZVU3PeMh4gRhdHpoTGhJdPj2BVarY/Wygk0NvfMQwKhRDNDUVzS77+7J3GCEpB5V979UvcZ/NHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vkuki\\OneDrive\\Radna površina\\projekat za 6 sims\\SIMS2021-wpf\\SIMS2021-wpf\\SIMS2021-wpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vkuki\\.nuget\\packages\\extended.wpf.toolkit\\4.0.2\\extended.wpf.toolkit.4.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Extended.Wpf.Toolkit 4.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Extended.Wpf.Toolkit",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
+}

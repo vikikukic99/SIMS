@@ -1,0 +1,20 @@
+﻿SIMS2021-wpf
+
+
+winexe
+C#
+.cs
+C:\Users\vkuki\OneDrive\Radna površina\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\obj\Debug\net5.0-windows\
+SIMS2021_wpf
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+C:\Users\vkuki\OneDrive\Radna površina\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\App.xaml
+111052366869
+
+58-1228608214
+1982112590676
+MainWindow.xaml;UI\Components\Login\View\LoginView.xaml;UI\Components\Toolbar\View\ToolbarView.xaml;UI\Dialogs\View\BillView.xaml;UI\Dialogs\View\BuyView.xaml;UI\Dialogs\View\DoctorView.xaml;UI\Dialogs\View\IngredientView.xaml;UI\Dialogs\View\MedicamentView.xaml;UI\Dialogs\View\PatientView.xaml;UI\Dialogs\View\ProductView.xaml;UI\Dialogs\View\UserView.xaml;
+
+False
+

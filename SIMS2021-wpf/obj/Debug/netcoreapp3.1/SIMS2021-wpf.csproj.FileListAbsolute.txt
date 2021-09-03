@@ -1,0 +1,5 @@
+C:\Users\Violeta Kukic\Desktop\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\obj\Debug\netcoreapp3.1\SIMS2021-wpf.csprojAssemblyReference.cache
+C:\Users\Violeta Kukic\Desktop\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Violeta Kukic\Desktop\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Violeta Kukic\Desktop\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\obj\Debug\netcoreapp3.1\SIMS2021-wpf_MarkupCompile.cache
+C:\Users\Violeta Kukic\Desktop\projekat za 6 sims\SIMS2021-wpf\SIMS2021-wpf\obj\Debug\netcoreapp3.1\SIMS2021-wpf_MarkupCompile.lref

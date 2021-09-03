@@ -1,0 +1,124 @@
+﻿<Window x:Class="SIMS2021.UI.Dialogs.View.BillView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS2021.UI.Dialogs.View" xmlns:converters="clr-namespace:SIMS2021.CompositeComon.Converters" xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        mc:Ignorable="d"
+        Title="BillView" Height="800" Width="1500">
+    <Window.Resources>
+        <converters:DialogStateToEnabledConverter x:Key="DialogStateToEnabledConverter" />
+        <converters:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
+    </Window.Resources>
+    <xcad:DockingManager>
+
+        <xcad:DockingManager.Theme>
+            <xcad:AeroTheme />
+        </xcad:DockingManager.Theme>
+
+        <xcad:LayoutRoot>
+            <xcad:LayoutPanel Orientation="Vertical">
+                <xcad:LayoutAnchorablePane DockWidth="200">
+                    <xcad:LayoutAnchorable ContentId="properties" Title="Data" CanHide="False" CanClose="False"
+                                            AutoHideWidth="240">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                                <Label Content="Search: "/>
+                                <TextBox Width="150" Height="30" Margin="5" Grid.Column="0" Grid.Row="0" Text="{Binding Search, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"/>
+                            </StackPanel>
+
+                            <Grid Grid.Column="0" Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <DataGrid x:Name="DataGrid" Grid.Column="0" Grid.Row="1" IsEnabled="{Binding DataGridEnabled}" SelectionMode="Single" ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" HorizontalScrollBarVisibility="Auto"
+					SelectedItem="{Binding SelectedItem}" Height="Auto" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="ID" Binding="{Binding ID, Mode=OneWay}"/>
+                                        <DataGridTextColumn Header="Farmacist" Binding="{Binding Farmacist, Mode=OneWay}"/>
+                                        <DataGridTextColumn Header="Date" Binding="{Binding Date, Mode=OneWay, Converter={StaticResource DateTimeToStringConverter}}"/>
+                                        <DataGridTextColumn Header="Time" Binding="{Binding Time, Mode=OneWay}"/>
+                                        <DataGridTextColumn Header="Full price" Binding="{Binding FullPrice, Mode=OneWay}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+
+                                
+
+                            </Grid>
+
+                        </Grid>
+                        
+
+                    </xcad:LayoutAnchorable>
+                </xcad:LayoutAnchorablePane>
+                <xcad:LayoutAnchorablePane DockWidth="200">
+                    <xcad:LayoutAnchorable ContentId="properties" Title="Controls" CanHide="False" CanClose="False"
+                                            AutoHideWidth="240">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Column="0" Grid.Row="0" IsEnabled="{Binding DialogState, Converter={StaticResource DialogStateToEnabledConverter}}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+
+                                <Label Grid.Column="0" Grid.Row="0" Content="ID: " />
+                                <TextBox Text="{Binding Path=SelectedItem.ID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True}"
+					Grid.Column="1" Grid.Row="0" Width="200"/>
+
+                                <Label Grid.Column="0" Grid.Row="1" Content="Farmacist: " />
+                                <TextBox Text="{Binding Path=SelectedItem.Farmacist, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True}"
+					Grid.Column="1" Grid.Row="1" Width="200"/>
+
+                                <Label Grid.Column="0" Grid.Row="2" Content="Date: " />
+                                <DatePicker SelectedDate="{Binding Path=SelectedItem.Date, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True}"
+					Grid.Column="1" Grid.Row="2" Width="200"/>
+
+                                <Label Grid.Column="0" Grid.Row="3" Content="Time: " />
+                                <TextBox Text="{Binding Path=SelectedItem.Time, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True}"
+					Grid.Column="1" Grid.Row="3" Width="200"/>
+
+                                <Label Grid.Column="0" Grid.Row="4" Content="Full price: " />
+                                <TextBox Text="{Binding Path=SelectedItem.FullPrice, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True, ValidatesOnExceptions=True}"
+					Grid.Column="1" Grid.Row="4" Width="200"/>
+
+                            </Grid>
+
+                            
+                        </Grid>
+
+                    </xcad:LayoutAnchorable>
+                </xcad:LayoutAnchorablePane>
+
+            </xcad:LayoutPanel>
+        </xcad:LayoutRoot>
+
+
+    </xcad:DockingManager>
+</Window>
