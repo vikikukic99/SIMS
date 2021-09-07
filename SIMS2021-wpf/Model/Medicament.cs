@@ -131,7 +131,7 @@ namespace SIMS2021.Model
             exportList.Add("Manufacturer");
             exportList.Add("Price");
             exportList.Add("Quantity");
-            exportList.Add("Ingredients");
+            exportList.Add("Reason");
             exportList.Add("Accepted");
             exportList.Add("Deleted");
         }

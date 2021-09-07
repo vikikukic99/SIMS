@@ -1,4 +1,4 @@
-3345345|34232|vkukic99@gmai.com|123|Violeta|Kukic|487936437|Patient
+3345345|34232|vkukic99@gmail.com|123|Violeta|Kukic|487936437|Patient
 67467344|87327823|nemanjakukic5@gmail.com|123|Nemanja|Kukic|567567567|Patient
 456789|3456|skukic71@gmail.com|123|snezana|kukic|534534534|Doctor
 345345|32233|mladenkukic@gmail.com|123|Mladen|Kukic|34512|Farmacist

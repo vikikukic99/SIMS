@@ -255,7 +255,7 @@ namespace SIMS2021.Model
                 medicament.Quantity = int.Parse(data[4]);
                 medicament.Accepted = bool.Parse(data[5]);
                 medicament.Deleted = bool.Parse(data[6]);
-                medicament.Reason = data[8];
+                medicament.Reason = data[7];
 
 
                 string[] ingredients = data[7].Split(',');
@@ -446,7 +446,8 @@ namespace SIMS2021.Model
                     line += ((Medicament)entity).Quantity + "|";
                     line += ((Medicament)entity).Accepted + "|";
                     line += ((Medicament)entity).Deleted + "|";
-                    
+                    line += ((Medicament)entity).Reason + "|";
+
 
                     foreach (KeyValuePair<Ingredient, double> ing in ((Medicament)entity).Ingredients)
                     {

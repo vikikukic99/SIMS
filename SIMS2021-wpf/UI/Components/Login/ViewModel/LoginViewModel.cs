@@ -25,6 +25,7 @@ namespace SIMS2021.UI.Components.Login.ViewModel
 
 		public LoginViewModel(Window dialog, PasswordBox passwordBox, MainWindowViewModel mainViewModel)
 		{
+
 			this.dialog = dialog;
 			this.passwordBox = passwordBox;
 			this.mainViewModel = mainViewModel;
